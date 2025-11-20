@@ -16,6 +16,7 @@ git clone https://github.com/ublue-os/yafti.git ./yafti && (
     ls -la .
     pacman --noconfirm -U *.pkg.tar.*
 )
+pacman -Syu --noconfirm python-gobject
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
