@@ -21,4 +21,4 @@ This makes it very easy and reliable to package it for other Linux distributions
 
 ## TO-DO
 
-- Make a GitHub action to package the AppImage in `.deb`, `.rpm`, `.apk` and other similar formats with desktop file and autostart entries integrated, like the previous `.rpm` did.
+- Make a GitHub action to package the AppImage in `.deb`, `.rpm`, `.apk` and other similar formats with desktop file and autostart entry integrated, like the previous `.rpm` did.
