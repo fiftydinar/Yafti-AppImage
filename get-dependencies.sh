@@ -4,15 +4,18 @@ set -eu
 
 ARCH=$(uname -m)
 
-echo "Installing package dependencies..."
+echo "Building yafti..."
 echo "---------------------------------------------------------------"
-# pacman -Syu --noconfirm PACKAGESHERE
+sed -i 's|EUID == 0|EUID == 69|g' /usr/bin/makepkg
+git clone https://github.com/ublue-os/yafti.git ./yafti && (
+	cd ./yafti
+  mv ./pkg/PKGBUILD ./PKGBUILD
+  sed -i 's/^pkgver=.*/pkgver=0.10.2/' ./PKGBUILD
+  makepkg -fs --noconfirm
+	ls -la .
+	pacman --noconfirm -U *.pkg.tar.*
+)
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
-
-# Comment this out if you need an AUR package
-#make-aur-package PACKAGENAME
-
-# If the application needs to be manually built that has to be done down here
