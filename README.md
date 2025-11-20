@@ -16,3 +16,5 @@ To solve this problem, I made the AppImage using alternative better utilities, u
 This way, AppImage works on every old and new distro, and on `musl` distros like Alpine. It doesn't require `libfuse` from the host.
 So it doesn't depend on the host system at all, besides `/bin/sh` being available, and if detected, Nvidia proprietary GPU driver will be used.  
 Everything needed, including binaries, libraries, GPU acceleration (`mesa`, `opengl`), etc. is contained inside the AppImage.
+
+This makes it very easy to package it for other Linux distributions if further desktop integration is needed (like adding systemd services, shell profiles, .desktop files etc.).
