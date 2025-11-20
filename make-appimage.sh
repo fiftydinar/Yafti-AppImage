@@ -8,6 +8,7 @@ export ARCH VERSION
 export OUTPATH=./dist
 # export ADD_HOOKS="self-updater.bg.hook" # This is excluded because it's going to be used in immutable directories
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
+export OUTNAME=yafti
 export ICON=DUMMY
 export DESKTOP=DUMMY
 export DEPLOY_SYS_PYTHON=1
