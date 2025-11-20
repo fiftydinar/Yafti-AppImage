@@ -17,8 +17,8 @@ export DEPLOY_GTK=1
 export GTK_DIR=gtk-4.0
 
 # Deploy dependencies
-quick-sharun /usr/bin/yafti \
-             /usr/lib/libgirepository*
+quick-sharun /usr/bin/yafti -- ./yafti-config.yml
+quick-sharun /usr/lib/libgirepository*
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
