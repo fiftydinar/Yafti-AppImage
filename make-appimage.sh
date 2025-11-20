@@ -3,7 +3,7 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=0.10.2
+VERSION=$(pacman -Q yafti | awk '{print $2; exit}')
 export ARCH VERSION
 export OUTPATH=./dist
 # export ADD_HOOKS="self-updater.bg.hook" # This is excluded because it's going to be used in immutable directories
