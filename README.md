@@ -18,3 +18,7 @@ So it doesn't depend on the host system at all, besides `/bin/sh` being availabl
 Everything needed, including binaries, libraries, GPU acceleration (`mesa`, `opengl`), etc. is contained inside the AppImage.
 
 This makes it very easy and reliable to package it for other Linux distributions if further desktop integration is needed (like adding systemd services, shell profiles, .desktop files etc.).
+
+## TO-DO
+
+- Make a GitHub action to package the AppImage in `.deb`, `.rpm`, `.apk` and other similar formats with desktop file and autostart entries integrated, like the previous `.rpm` did.
