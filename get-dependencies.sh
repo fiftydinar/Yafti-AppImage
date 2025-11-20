@@ -10,8 +10,6 @@ sed -i 's|EUID == 0|EUID == 69|g' /usr/bin/makepkg
 git clone https://github.com/ublue-os/yafti.git ./yafti && (
     cd ./yafti
     mv ./pkg/PKGBUILD ./PKGBUILD
-    sed -i 's/^pkgver=.*/pkgver=0.10.2/' ./PKGBUILD
-    sed -i 's/^sha512sums=.*/sha512sums=(e37e72f0cf53c0f1593b1feaeb2499bb038f70b2788a01140a935599a1c846db868082f0eaff17e5312d32c9000bfd40cd078d022fc371d629c5040211c4c920)/' ./PKGBUILD
     makepkg -fs --noconfirm
     ls -la .
     pacman --noconfirm -U *.pkg.tar.*
