@@ -16,6 +16,7 @@ export DEPLOY_SYS_PYTHON=1
 export DEPLOY_GTK=1
 export GTK_DIR=gtk-4.0
 export ANYLINUX_LIB=1
+export ALWAYS_SOFTWARE=1
 
 # Deploy dependencies
 quick-sharun /usr/bin/yafti -- ./yafti-config.yml
